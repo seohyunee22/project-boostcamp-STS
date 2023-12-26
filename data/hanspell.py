@@ -1,15 +1,13 @@
-# !pip install symspellpy-ko
+# !unzip hanspell.zip
 
 import pandas as pd
 import argparse
-from symspellpy_ko import KoSymSpell, Verbosity
 
+import hanspell
+from hanspell import spell_checker    
 
 def main():
     train_df = pd.read_csv(args.read_path)
-
-    sym_spell = KoSymSpell()
-    sym_spell.load_korean_dictionary(decompose_korean=True, load_bigrams=True)
 
     s1_results = []
     s2_results = []
