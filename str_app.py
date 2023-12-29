@@ -32,9 +32,7 @@ def main():
         if sentence1 and sentence2:
             similarity_score = get_prediction(model, sentence1, sentence2)
 
-            # df에 이미 있는 유사도 쌍이면 추가 안함
-            if not ((st.session_state.df['sentence 1'] == sentence1) & (st.session_state.df['sentence 2'] == sentence2)).any():
-                # 새로운 데이터를 기존 df에 합치기 
+            if not ((st.session_state.df['sentence 1'] == sentence1) & (st.session_state.df['sentence 2'] == sentence2)).any():    # 이미 있을 경우 추가 제외
                 new_data = pd.DataFrame({
                     'sentence 1': [sentence1],
                     'sentence 2': [sentence2],
@@ -51,8 +49,7 @@ def main():
             st.write(f"두 문장의 유사도 : {similarity_score}")
             st.success('성공!')
         else:
-            st.write("Please enter both sentences.")
-            st.error('다시 한번 생각해보세요!')
+            st.error('error!')
 
     st.divider()
     col1, col2, col3 = st.columns(3)
@@ -60,8 +57,8 @@ def main():
     # df 크기 조절
     col1.checkbox("창 크기조절", value=True, key="use_container_width")
 
-    # df 리셋 버튼
-    if col2.button("데이터 리셋하기"):
+    # df 리셋
+    if col2.button("데이터 리셋"):
         st.session_state.df = pd.DataFrame({
             'sentence 1': [],
             'sentence 2' : [],
@@ -76,7 +73,7 @@ def main():
     col3.download_button(
         label="CSV로 다운받기",
         data=csv,
-        file_name='sts_data_outputs.csv',
+        file_name='outputs.csv',
         mime='text/csv',
     )
 
