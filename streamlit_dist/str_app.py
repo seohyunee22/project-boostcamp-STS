@@ -10,7 +10,6 @@ def main():
     st.image(Image.open('1.png'))
     st.image(Image.open('2.png'))
 
-    st.caption('*원하는 문장 두 개를 입력해보세요!*:sunglasses:')
 
     model = load_model()
     model.eval()
