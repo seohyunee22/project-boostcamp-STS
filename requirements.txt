@@ -107,6 +107,8 @@ sortedcontainers==2.4.0
 soupsieve @ file:///croot/soupsieve_1696347547217/work
 stack-data @ file:///opt/conda/conda-bld/stack_data_1646927590127/work
 sympy @ file:///croot/sympy_1668202399572/work
+symspell==6.7.0
+symspellpy-ko==0.1.4
 tokenizers==0.15.0
 tomli @ file:///opt/conda/conda-bld/tomli_1657175507142/work
 toolz @ file:///croot/toolz_1667464077321/work
