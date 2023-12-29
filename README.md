@@ -1,3 +1,4 @@
+
 # level1_sts_project
 문장 간 유사도 측정(의미 유사도 판별(Semantic Text Similarity, STS)  
 
@@ -276,8 +277,6 @@ bert 증강기법으로 증강하였으나 여전히 label 0 데이터의 비율
   
 
 
-  
-  
 
 ### Appendix
 
@@ -286,58 +285,22 @@ bert 증강기법으로 증강하였으나 여전히 label 0 데이터의 비율
 |   |   |   |   |   |
 |---|---|---|---|---|
 |Data,Model|epoch|lr|val_loss|val_pearson|
-|baseline,snunlp/KR-ELECTRA-discriminator|10|1.7e-05|
-0.18286
-0.91436
-swap
-snunlp/KR-ELECTRA-discriminator/10/1.7e-05
-0.05068
-0.9137
-regexp
-snunlp/KR-ELECTRA-discriminator/10/1.7e-05
-0.18286
-0.91436
-swap+regexp
-kykim/electra-kor-base/10/1.7e-05
+|baseline, snunlp/KR-ELECTRA-discriminator|10|1.7e-05|0.18286|0.91436|
+|swap, snunlp/KR-ELECTRA-discriminator|10|1.7e-05|0.05068|0.9137|
+|regexp, snunlp/KR-ELECTRA-discriminator|10|1.7e-05|0.18286|0.91436|
+|swap+regexp|kykim/electra-kor-base|10|1.7e-05||0.90356|
+|hanspell|snunlp/KR-ELECTRA-discriminator|11|1.7e-05|0.19808|0.920|
+|aug(no drop), snunlp/KR-ELECTRA-discriminator|10|1.896e-05|0.17166|0.92171|
+|aug(no drop), kykim/electra-kor-base|10|1.896e-05|0.14737|0.92098|
+|aug(1/3 drop), snunlp/KR-ELECTRA-discriminator|15|1.896e-05|0.9167|
+|aug+smoothing(label0 1/4)+copied(hanspell), snunlp/KR-ELECTRA-discriminator|9|1.7e-05|0.15111|0.9326|
+|aug+smoothing(label0 1/4)+copied(hanspell), kykim/electra-kor-base|15|1.7e-05|0.15504|0.92406|
+|aug+smoothing(label0 1/4)+copied(hanspell), monologg/koelectra-base-discriminator|10|1.7e-05|0.18699|0.89659|
+|aug+smoothing(label0 1/2)+copied(hanspell), snunlp/KR-ELECTRA-discriminator|9|1.7e-05|0.15137|0.92763|
+|aug+smoothing(label0 1/2)+copied(hanspell), kykim/electra-kor-base|15|1.7e-05|0.14123|0.92443|
+
+  
 
 
-0.90356
-hanspell
-snunlp/KR-ELECTRA-discriminator/11/1.7e-05
-0.19808 epoch 11
-0.920
-aug(no drop)
-snunlp/KR-ELECTRA-discriminator/10/1.896e-05
-0.17166
-0.92171
-aug(no drop)
-kykim/electra-kor-baser/10/1.896e-05
-0.14737
-0.92098
-aug(1/3 drop)
-snunlp/KR-ELECTRA-discriminator/15/1.896e-05
-
-
-0.9167
-aug+smoothing(label0 1/4)+copied(hanspell)
-snunlp/KR-ELECTRA-discriminator/9/1.7e-05
-0.15111
-0.9326
-aug+smoothing(label0 1/4)+copied(hanspell)
-kykim/electra-kor-base/15/1.7e-05
-0.15504
-0.92406
-aug+smoothing(label0 1/4)+copied(hanspell)
-monologg/koelectra-base-discriminator/10/1.7e-05
-0.18699
-0.89659
-aug+smoothing(label0 1/2)+copied(hanspell)
-snunlp/KR-ELECTRA-discriminator/9/1.7e-05
-0.15137
-0.92763
-aug+smoothing(label0 1/2)+copied(hanspell)
-kykim/electra-kor-base/15/1.7e-05
-0.14123
-0.92443
 
 
