@@ -278,9 +278,11 @@ bert 증강기법으로 증강하였으나 여전히 label 0 데이터의 비율
 
 
 
-### Appendix
+### 5. Appendix
 
- 실험 결과 정리
+##### [최종 Wrap-UP Report](https://drive.google.com/file/d/1OKyZseqayzV8oNGIxIzxFZzeBStZ3bj7/view?usp=drive_link)
+
+##### 실험 결과 정리
  loss = SmoothL1, batch_size = 16 고정
 |   |   |   |   |   |   |
 |---|---|---|---|---|---|
