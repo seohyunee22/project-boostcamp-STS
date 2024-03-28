@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=KLUE-STS&fontAlignY=26&desc=문장%20간%20의미%20유사도%20측정(Semantic%20Text%20Similarity,%20STS)&descAlignY=49&descSize=23&fontColor=ffffff)
+![header](https://capsule-render.vercel.app/api?type=waving&height=200&fontSize=50&color=gradient&text=KLUE-STS&fontAlignY=26&desc=문장%20간%20의미%20유사도%20측정(Semantic%20Text%20Similarity,%20STS)&descAlignY=49&descSize=23&fontColor=ffffff)
 <td style="text-align:center; border-color:white" rowspan="3" width=660>
       <p align="center">
         <img src="/etc/klue-sts-img.png" width=600>    
