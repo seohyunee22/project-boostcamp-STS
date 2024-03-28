@@ -35,7 +35,7 @@ STS는 TE(Textual Entailment)와 달리 수치화 가능한 양방향 동등성�
 평가 방법은 다음과 같습니다.
 <br>
 
-1. 입력(.csv)을 구축한 모델을 활용한 유사도 측정 완료 후, 0~5사이의 유사도 점수와 ID를 파일(.csv)에 저장하여 제출
+1. 입력(.csv)을 구축한 모델을 활용한 유사도 측정 완료 후, ID와 0~5사이의 유사도 점수를 출력(.csv)으로로 제출
 - `입력`: 두 개의 문장과 ID, 유사도 정보
 - `출력`: 평가 데이터에 있는 각 문장쌍에 대한 ID와 0~5 사이의 유사도 점수
   
@@ -44,7 +44,9 @@ STS는 TE(Textual Entailment)와 달리 수치화 가능한 양방향 동등성�
       <p align="center">
         <img src="/etc/pearson.png" width=400>    
       </p>
-    </td>  
+</td>  
+<br>
+
 2. 평가 기준
 
 - 평가 기준은 예측과 정답 간의 `피어슨 상관 계수(Pearson Correlation Coefficient)` 입니다.
@@ -55,102 +57,127 @@ STS는 TE(Textual Entailment)와 달리 수치화 가능한 양방향 동등성�
 
 
 ##  🙆🏻 Members 
-
+<table align="center">
+  <tr height="8px">
+    <td align="center" style="text-align:center;" width="190px">
+      <b>공통</b>
+    </td>
+    <td align="center" style="text-align:center;" width="760px">
+      <b>데이터 분석, 실험 수립 및 진행, 하이퍼 파라미터 튜닝, Wrap Up 리포트 작성</b>
+    </td>
+  </tr>
+</table>
 <table align="center">
   <tr height="155px">
-    <td align="center" width="170px">
+    <td align="center" width="190px">
       <a href="https://github.com/seohyunee22"><img src="https://avatars.githubusercontent.com/seohyunee22"/></a>
     </td>
-    <td align="center" width="170px">
+    <td align="center" width="190px">
       <a href="https://github.com/in-sukim"><img src="https://avatars.githubusercontent.com/in-sukim"/></a>
     </td>
-    <td align="center" width="170px">
+    <td align="center" width="190px">
       <a href="https://github.com/Secludor"><img src="https://avatars.githubusercontent.com/Secludor"/></a>
     </td>
-    <td align="center" width="170px">
+    <td align="center" width="190px">
       <a href="https://github.com/"><img src="https://avatars.githubusercontent.com/nachalsa"/></a>
     </td>
-    <td align="center" width="170px">
+    <td align="center" width="190px">
       <a href="https://github.com/Yunan31"><img src="https://avatars.githubusercontent.com/Yunan31"/></a>
     </td>
   </tr>
   
   <tr height="40px">
-    <td align="center" width="170px">
+    <td align="center" width="190px">
       <a href="https://github.com/seohyunee22">양서현_T6099</a>
     </td>
-    <td align="center" width="170px">
+    <td align="center" width="190px">
       <a href="https://github.com/">김인수</a>
     </td>
-    <td align="center" width="170px">
+    <td align="center" width="190px">
       <a href="https://github.com/sanggank">오주영</a>
     </td>
-    <td align="center" width="170px">
+    <td align="center" width="190px">
       <a href="https://github.com/tmdqor">문지원</a>
     </td>
-    <td align="center" width="170px">
+    <td align="center" width="190px">
       <a href="https://github.com/nachalsa">손윤환</a>
     </td>
   </tr>
 
    <tr height="80px">
-    <td style="text-align:left;" width="170px">
-      <b>- 팀장</b><br>
-      <b>- 프로젝트 기획</b><br>
-      <b>- 모델 조사</b><br> 
-      <b>- baseline코드 작성</b><br>
-      <b>- 웹 프론트엔드</b><br>
+    <td style="text-align:left;" width="190px">
+      <b>- EDA </b><br>
+      <b>- 데이터 증강<br>(Label Smoothing, Copied Sentence)</b><br>
+      <b>- 문장 교정<br>(py-hanspell)</b><br> 
     </td>
-    <td style="text-align:left;" width="170px">
-      <b>- 데이터셋 조사</b><br>
-      <b>- 토크나이징 방식 비교 및 실험</b><br>
-      <b>- Model 3 구현</b><br>
+    <td style="text-align:left;" width="190px">
+      <b>- 앙상블 Baseline <br>코드 작성</b><br>
+      <b>- 데이터 증강(Bert) </b><br>
     </td>
-    <td style="text-align:left;" width="170px">
-      <b>- 데이터 생성/수집</b><br>
-      <b>- Model 1 구현</b><br>
+    <td style="text-align:left;" width="190px">
+      <b>- 손실함수 탐색</b><br>
+      <b>- 손실함수 비교/분석<br>/최적화</b><br>
     </td>
-    <td style="text-align:left;" width="170px">
-      <b>- 데이터 가공</b><br>
-      <b>- 백엔드 제작</b><br>
+    <td style="text-align:left;" width="190px">
+      <b>- 한국어 기반 모델 탐색</b><br>
+      <b>- 데이터 전처리 실험(특수문자 제거, 형태소 분석)</b><br>
     </td>
-    <td style="text-align:left;" width="170px">
-      <b>- 토크나이징 방식 개선</b><br>
-      <b>- 생성방식 다각화 구상 / 실험</b><br>
+    <td style="text-align:left;" width="190px">
+      <b>- 한국어 기반 모델 탐색</b><br>
+      <b>- 데이터 이상치 분석</b><br>
+      <b>- 데이터 증강(역번역)</b><br>
     </td>
   </tr>
 </table>
 
+### <p align="center">협업관리</p>
+<table align="center">
+  <tr height="8px">
+    <td align="center" style="text-align:center;" width="80px">
+      <b>Notion</b>
+    </td>
+    <td align="center" style="text-align:center;" width="80px">
+      <b>Github</b>
+    </td>
+  </tr>
+  
+  <tr height="40px">
+    <td align="center" width="150px">
+       <a href="https://www.notion.so/Time-Flies-ae9378d5426d4e659ee3b5aacaab0d64"><img src="https://img.shields.io/badge/notion-%23000000.svg?&style=flat-square&logo=notion&logoColor=white "/></a>
+    </td>
+    <td align="center" width="150px">
+      <a href="https://github.com/boostcampaitech6/level1-semantictextsimilarity-nlp-09"><img src="https://img.shields.io/badge/github-181717?style=flat-square&logo=github&logoColor=white">
+    </td>
+  </tr>
+</table>
+<p align="center">(↑ 로고를 클릭하면 링크로 이동합니다)</p>
 <br>
 
 ## 🛠️ Tech Stack
-<img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"> <img src="https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi"> <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=AmazonAWS&logoColor=white"/> <img src="https://img.shields.io/badge/react-%2361DAFB.svg?&style=flat-square&logo=react&logoColor=black" /> <img src="https://img.shields.io/badge/node.js-%23339933.svg?&style=flat-square&logo=node.js&logoColor=white" /> <img src="https://img.shields.io/badge/github-181717?style=flat-square&logo=github&logoColor=white">
+<img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"> <img src="https://img.shields.io/badge/Pytorch Lightening-792EE5?style=flat-square&logo=lightning&logoColor=white"> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"> 
+<br><img src="https://img.shields.io/badge/github-181717?style=flat-square&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/notion-%23000000.svg?&style=flat-square&logo=notion&logoColor=white "/>
+
+<!--<img src="https://img.shields.io/badge/jupyter notebook-F37626?style=flat-square&logo=jupyter&logoColor=white"> -->
 <!--<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">-->
 <!--<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white">-->
-
-
 <br>
-
-
-
-
 
   
 
-## 3.  프로젝트 수행 절차 및 방법
+## 💡 프로젝트 수행
 
-### 3.1. 진행 절차
+### EDA (Exploratory Data Analysis
+주어진 데이터의 Label 분포, Source 분포, 문장 길이, 문장 형태 분석과 관련된 탐색적 분석을 진행하였습니다.<br>
+또한 이를 통해 성능 개선을 위한 가설 및 전략을 수립하였습니다.<br>
 
-1. 강의 수강 및 사전 학습
-    
-2. 데이터 EDA, 다양한 접근 방법 조사 및 실험
-    
-3. 진행한 실험 공유 및 유의미한 접근법 선정
-    
-4. 선정한 접근법 기반 역할 분배 및 실험 진행
-    
-5. 모델 튜닝 및 앙상블 통해 최종 결과물 도출
-    
+1. Basic Data Information<br>
+학습 데이터 개수 9,234개, 검증 데이터 개수 550개, 평가 데이터 개수 1,100개로, 3개의 dataset 모두 null값은 존재하지 않았습니다.
+target column label은 0~5 사이 float64 type으로 해당 task는 Regression 문제에 해당한다고 보았습니다.
+<br>
+
+2. Label 분포
+   
+3.  
 
   
 
