@@ -1,64 +1,139 @@
+![header](https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=KLUE-STS&fontAlignY=26&desc=문장%20간%20의미%20유사도%20측정(Semantic%20Text%20Similarity,%20STS)&descAlignY=49&descSize=23&fontColor=ffffff)
+<td style="text-align:center; border-color:white" rowspan="3" width=660>
+      <p align="center">
+        <img src="/etc/klue-sts-img.png" width=600>    
+      </p>
+    </td>  
 
-# level1_sts_project
-문장 간 유사도 측정(의미 유사도 판별(Semantic Text Similarity, STS)  
+### <p align="center"><code>KLUE-STS task</code>는</p>
+<p align="center">복수 문장에 대한 유사도를</p>
+<p align="center">선형적 수치로 제시하는 NLP Task 입니다. </p>
 
-# 1. Intro
+## 📖 Overview
+### 1. 프로젝트 개요
+인간은 **교정작업**을 하면서 의미적으로 중복된 문장을 인지하고 수정하게 됩니다.
+<br>
+그렇다면 기계의 경우는, 서로 구조적으로 다르지만 **의미가 유사한 것을 어떻게 구별**할 수 있을까요?
+<br>
+이러한 경우에 `Semantic Text Similiarity(STS)` Task를 사용할 수 있습니다.
+<br>
 
-## 1.1. 개요
+STS는 TE(Textual Entailment)와 달리 수치화 가능한 양방향 동등성을 가정하고 진행됩니다.
+<br>
+따라서, STS Task는 정보 추출, 질문-답변 및 요약과 같은 NLP 작업 전반에 널리 활용 및 응용되고 있습니다.
 
-- Semantic Text Similarity: 복수의 문장에 대한 유사도를 선형적 수치로 제시하는 NLP Task.
-- 이는 두 문장이 서로 동등하다는 양방향성 가정하고 진행됨.
-- 이러한 수치화 가능한 양방향 동등성은 정보 추출, 질문-답변 및 요약과 같은 NLP 작업 전반에 널리 활용 및 응용.
-- 대회 목표는 STS 데이터셋을 활용해 두 문장의 유사도를 측정하는 AI 모델의 구축.
-- [0, 5] 범위의 유사도 점수를 출력
+### 2. 목표
+- STS 데이터셋을 활용해 두 문장의 유사도를 측정하는 AI 모델을 구축하는 것을 대회의 목표로 합니다.
+- [0, 5] 범위의 유사도 점수를 예측하는 것을 목적으로 합니다.
 
-![](https://lh7-us.googleusercontent.com/_zl7-k8E9oCZ6_saZcDhbm49JXmJTzv3_IAsodh7BwKh04pV336lymw0YC6hnYz4nSTB7dIOyANJg94QtMTtKuNK48N2s9HZ-od6EaZT3fct-9JNvW_KvM5rDL6kz1bosbORGSZMMVxGUUboaLRQ9QQ)
-- 학습 데이터셋 9,234개, 검증 데이터셋 550개, 평가 데이터셋 1,100개.
-
-- 평가 데이터의 50%는 Public 점수 계산에 활용, 실시간 리더보드에 반영되며 남은 50%는 Private 결과 계산에 활용되어 최종 평가에 반영.
-
-- 최종 결과물은 .csv 형태로 제출.
-
-- 입력: 두 개의 문장과 ID, 유사도 정보
-
-- 출력: 평가 데이터에 있는 각 문장쌍에 대한 ID와 유사도 점수
-
-![](https://lh7-us.googleusercontent.com/_2tdRz7ayix0SSEnckaAcvJ1HbMjncY4sF2-0vpY4NGboTJAcS-2OAWw6DxG2stkU4Q9KXNCftIuZHj0YGFShIT2HNlNik_8rn_5EvMVEZWiWmvCCgdRIKg7OUtAJStnNPK6_2Z_VQVDL7rXt4bUuHI)
-
-- 평가 기준은 예측과 정답 간의 Pearson Correlation Coefficient으로 삼는다.
-
-- 개별 예측의 일치보다는 전체적인 경향의 유사도가 중요.
-
-![](https://lh7-us.googleusercontent.com/wSimaDFPMiJrUglcBIKY8BYqGmtbpYHk9804MJGBKJcLW6VJhdMZk42LOYr2L_rhC7USiWoGZGWZ4DJiaF8LRO8qb22GlPqF--b0xoDjUm0xBslaxa_khVzfMQApLXn4Yh0LLDYzdgNLT49RVITVX3Y)
+### 3. 데이터셋 
+- 학습 데이터셋 9,234개, 검증 데이터셋 550개, 평가 데이터셋 1,100개 로 구성되어 있습니다.
+- 평가 데이터의 50%는 Public 점수 계산에 활용, 실시간 리더보드에 반영되며 남은 50%는 Private 결과에 반영되어 최종평가에 반영됩니다.
 
 
-## 1.2. 프로젝트 구조
+### 4. 평가 방법
+평가 방법은 다음과 같습니다.
+<br>
 
-![](https://lh7-us.googleusercontent.com/FyBGLGr7U2cEFkucXuvOyuUgyLZI5t7y8ienwowt_NEPkjtUF2FnUomFsJLLAi0N-l3dRdAvf9lXMHG7tChuLI9pO7xrd5QUnA0ECP_haXSUTr5wsOC1jg7ncTTwxJkY_lI9uR-wnCXocI24T1pM84w)
-
-![](https://lh7-us.googleusercontent.com/yD24sgVgJsvlbOAtpuNqQooqy4CjF07iuHdYj28E7c6yYVeKbhZXy5pF3KsFDKGuw07dPIdA8BB6Ih-df0SbDUeyI8x74Ba_zWkcURbNu-CUsUfkvOBzP6BOFoEmn-aueof_-5Zxp104_a3sqMh1dPk)
-
-![](https://lh7-us.googleusercontent.com/VFIis-zBP-XdHMgHvbk9PbYlI_RyAUXuJMiIoIj_m47WkiDEGxWaJCdrwH7KHRhCrZL9Zx_gBEVOWq1q4NNECzLstlA2rWQ9jGnL39Y1Hu0FpnPxcLSgglwHjyIWylJC2rApG4eFAJ93yNNupOy4hwk)
-
+1. 입력(.csv)을 구축한 모델을 활용한 유사도 측정 완료 후, 0~5사이의 유사도 점수와 ID를 파일(.csv)에 저장하여 제출
+- `입력`: 두 개의 문장과 ID, 유사도 정보
+- `출력`: 평가 데이터에 있는 각 문장쌍에 대한 ID와 0~5 사이의 유사도 점수
   
 
-## 1.3. 프로젝트 환경
+<td style="text-align:center; border-color:white" rowspan="3" width=660>
+      <p align="center">
+        <img src="/etc/pearson.png" width=400>    
+      </p>
+    </td>  
+2. 평가 기준
 
-- GPU: V100 * 5
-- 협업 관리: [Notion](https://www.notion.so/Time-Flies-ae9378d5426d4e659ee3b5aacaab0d64), [Github](https://github.com/boostcampaitech6/level1-semantictextsimilarity-nlp-09)
+- 평가 기준은 예측과 정답 간의 `피어슨 상관 계수(Pearson Correlation Coefficient)` 입니다.
+- 따라서, 개별 예측값과 정답값의 일치보다는 전체적인 경향의 유사도가 중요합니다.
+<br>
+  
 
 
-## 2. 프로젝트 팀 구성 및 역할
 
-|   |   |
-|---|---|
-|팀원|역할|
-|공통|데이터 분석, 실험 수립 및 진행, 하이퍼 파라미터 튜닝, Wrap Up 리포트 작성|
-|김인수|모델 학습 및 앙상블 베이스라인 코드 작성, 데이터 증강(bert)|
-|오주영|손실함수 탐색, 다양한 손실함수 비교/분석 및 최적화|
-|양서현|train-dev 데이터 분석, 데이터 증강(Label Smoothing, Copied sentence, 문장 교정)|
-|문지원|한국어 기반 모델 탐색, 데이터 전처리 실험(특수문자 제거, 형태소 분석)|
-|손윤환|한국어 기반 모델 탐색, 예측 데이터 이상치 분석, 데이터 증강 실험(역번역)|
+##  🙆🏻 Members 
+
+<table align="center">
+  <tr height="155px">
+    <td align="center" width="170px">
+      <a href="https://github.com/seohyunee22"><img src="https://avatars.githubusercontent.com/seohyunee22"/></a>
+    </td>
+    <td align="center" width="170px">
+      <a href="https://github.com/in-sukim"><img src="https://avatars.githubusercontent.com/in-sukim"/></a>
+    </td>
+    <td align="center" width="170px">
+      <a href="https://github.com/Secludor"><img src="https://avatars.githubusercontent.com/Secludor"/></a>
+    </td>
+    <td align="center" width="170px">
+      <a href="https://github.com/"><img src="https://avatars.githubusercontent.com/nachalsa"/></a>
+    </td>
+    <td align="center" width="170px">
+      <a href="https://github.com/Yunan31"><img src="https://avatars.githubusercontent.com/Yunan31"/></a>
+    </td>
+  </tr>
+  
+  <tr height="40px">
+    <td align="center" width="170px">
+      <a href="https://github.com/seohyunee22">양서현_T6099</a>
+    </td>
+    <td align="center" width="170px">
+      <a href="https://github.com/">김인수</a>
+    </td>
+    <td align="center" width="170px">
+      <a href="https://github.com/sanggank">오주영</a>
+    </td>
+    <td align="center" width="170px">
+      <a href="https://github.com/tmdqor">문지원</a>
+    </td>
+    <td align="center" width="170px">
+      <a href="https://github.com/nachalsa">손윤환</a>
+    </td>
+  </tr>
+
+   <tr height="80px">
+    <td style="text-align:left;" width="170px">
+      <b>- 팀장</b><br>
+      <b>- 프로젝트 기획</b><br>
+      <b>- 모델 조사</b><br> 
+      <b>- baseline코드 작성</b><br>
+      <b>- 웹 프론트엔드</b><br>
+    </td>
+    <td style="text-align:left;" width="170px">
+      <b>- 데이터셋 조사</b><br>
+      <b>- 토크나이징 방식 비교 및 실험</b><br>
+      <b>- Model 3 구현</b><br>
+    </td>
+    <td style="text-align:left;" width="170px">
+      <b>- 데이터 생성/수집</b><br>
+      <b>- Model 1 구현</b><br>
+    </td>
+    <td style="text-align:left;" width="170px">
+      <b>- 데이터 가공</b><br>
+      <b>- 백엔드 제작</b><br>
+    </td>
+    <td style="text-align:left;" width="170px">
+      <b>- 토크나이징 방식 개선</b><br>
+      <b>- 생성방식 다각화 구상 / 실험</b><br>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+## 🛠️ Tech Stack
+<img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"> <img src="https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi"> <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=AmazonAWS&logoColor=white"/> <img src="https://img.shields.io/badge/react-%2361DAFB.svg?&style=flat-square&logo=react&logoColor=black" /> <img src="https://img.shields.io/badge/node.js-%23339933.svg?&style=flat-square&logo=node.js&logoColor=white" /> <img src="https://img.shields.io/badge/github-181717?style=flat-square&logo=github&logoColor=white">
+<!--<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">-->
+<!--<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white">-->
+
+
+<br>
+
+
+
+
 
   
 
