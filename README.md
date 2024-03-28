@@ -168,7 +168,7 @@
        <a href="https://www.notion.so/Time-Flies-ae9378d5426d4e659ee3b5aacaab0d64"><img src="https://img.shields.io/badge/notion-%23000000.svg?&style=flat-square&logo=notion&logoColor=white "/></a>
     </td>
     <td align="center" width="150px">
-      <a href="https://github.com/boostcampaitech6/level1-semantictextsimilarity-nlp-09"><img src="https://img.shields.io/badge/github-181717?style=flat-square&logo=github&logoColor=white">
+      <a href="https://github.com/seohyunee22/project-boostcamp-STS/blob/main/etc/STS_WrapUp_NLP_09.docx"><img src="https://img.shields.io/badge/github-181717?style=flat-square&logo=github&logoColor=white">
     </td>
   </tr>
 </table>
