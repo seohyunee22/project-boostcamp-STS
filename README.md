@@ -24,7 +24,7 @@
        <a href="https://www.notion.so/STS-Project-036af3f1ac0e42ad9ce7df59276849d4"><img src="https://img.shields.io/badge/notion-%23000000.svg?&style=flat-square&logo=notion&logoColor=white "/></a>
     </td>
     <td align="center" width="150px">
-      <a href="https://github.com/seohyunee22/project-boostcamp-STS/blob/read-me-main/etc/STS_WrapUp_NLP_09.pdf"><img src="https://img.shields.io/badge/word-2B579A?style=flat-square&logo=microsoftword&logoColor=white">
+      <a href="https://github.com/seohyunee22/project-boostcamp-STS/blob/read-me-main/etc/STS_WrapUp_NLP_09.docx"><img src="https://img.shields.io/badge/word-2B579A?style=flat-square&logo=microsoftword&logoColor=white">
     </td>
   </tr>
 </table>
