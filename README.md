@@ -1,7 +1,7 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&height=200&fontSize=50&color=gradient&text=KLUE-STS&fontAlignY=26&desc=문장%20간%20의미%20유사도%20측정(Semantic%20Text%20Similarity,%20STS)&descAlignY=49&descSize=23&fontColor=ffffff)
 <td style="text-align:center; border-color:white" rowspan="3" width=660>
       <p align="center">
-        <img src="/etc/klue-sts-img.png" width=600>    
+        <img src="/assets/klue-sts-img.png" width=600>    
       </p>
     </td>  
 
@@ -64,7 +64,7 @@
 
 <td style="text-align:center; border-color:white" rowspan="3" width=660>
       <p align="center">
-        <img src="/etc/pearson.png" width=400>    
+        <img src="/assets/pearson.png" width=400>    
       </p>
 </td>  
 <br>
@@ -168,7 +168,7 @@
        <a href="https://www.notion.so/Time-Flies-ae9378d5426d4e659ee3b5aacaab0d64"><img src="https://img.shields.io/badge/notion-%23000000.svg?&style=flat-square&logo=notion&logoColor=white "/></a>
     </td>
     <td align="center" width="150px">
-      <a href="https://github.com/seohyunee22/project-boostcamp-STS/blob/main/etc/STS_WrapUp_NLP_09.docx"><img src="https://img.shields.io/badge/github-181717?style=flat-square&logo=github&logoColor=white">
+      <a href="https://github.com/seohyunee22/project-boostcamp-STS/blob/main/assets/STS_WrapUp_NLP_09.docx"><img src="https://img.shields.io/badge/github-181717?style=flat-square&logo=github&logoColor=white">
     </td>
   </tr>
 </table>
